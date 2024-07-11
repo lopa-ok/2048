@@ -195,14 +195,15 @@ function showGameOverModal() {
   const modal = document.getElementById('game-over-modal');
   const scoreElement = document.getElementById('game-over-score');
   scoreElement.textContent = score;
+  modal.style.display = 'flex';
 }
 
 function restartGame() {
   const modal = document.getElementById('game-over-modal');
+  modal.style.display = 'none';
   score = 0;
   createBoard();
   addRandomTile();
   addRandomTile();
   updateBoard();
 }
-
